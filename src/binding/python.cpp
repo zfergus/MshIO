@@ -10,6 +10,7 @@ PYBIND11_MAKE_OPAQUE(std::vector<double>);
 PYBIND11_MAKE_OPAQUE(std::vector<std::string>);
 PYBIND11_MAKE_OPAQUE(std::vector<mshio::NodeBlock>);
 PYBIND11_MAKE_OPAQUE(std::vector<mshio::ElementBlock>);
+PYBIND11_MAKE_OPAQUE(std::vector<mshio::Data>);
 PYBIND11_MAKE_OPAQUE(std::vector<mshio::DataEntry>);
 PYBIND11_MAKE_OPAQUE(std::vector<mshio::PointEntity>);
 PYBIND11_MAKE_OPAQUE(std::vector<mshio::CurveEntity>);
@@ -26,6 +27,7 @@ PYBIND11_MODULE(mshio, m)
     py::bind_vector<std::vector<std::string>>(m, "VectorString");
     py::bind_vector<std::vector<mshio::NodeBlock>>(m, "VectorNodeBlock");
     py::bind_vector<std::vector<mshio::ElementBlock>>(m, "VectorElementBlock");
+    py::bind_vector<std::vector<mshio::Data>>(m, "VectorData");
     py::bind_vector<std::vector<mshio::DataEntry>>(m, "VectorDataEntry");
     py::bind_vector<std::vector<mshio::PointEntity>>(m, "VectorPointEntity");
     py::bind_vector<std::vector<mshio::CurveEntity>>(m, "VectorCurveEntity");
